@@ -1,0 +1,133 @@
+
+.App {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+#header__title {
+  background-color: #76b5c5;
+  padding: 0.8rem;
+  font-family: monospace;
+}
+#add__student {
+  margin-right: 5%;
+  float: right;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+/*pagination-style*/
+.pro-result {
+  margin-top: 30px;
+  align-items: center;
+}
+.pro-result .pagination-style:last-child {
+  text-align: right;
+}
+.pagination-style .pagination ul {
+  padding-left: 0;
+  margin-bottom: 0px;
+  display: flex;
+}
+.pagination-style .pagination ul li {
+  list-style-type: none;
+  display: inline-block;
+  margin-right: 5px;
+}
+.pagination-style .pagination ul li button {
+  color: #000;
+  float: left;
+  padding: 6px 12px;
+  text-decoration: none;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.pagination-style .pagination ul li button.active,
+.pagination-style .pagination ul li button:hover {
+  background-color: #13b5ea;
+  border: 1px solid #13b5ea;
+  color: #fff !important;
+}
+
+.pagination-style .show-result p {
+  margin-bottom: 0px;
+  color: #bbb;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+.paginationBttns {
+  width: 80%;
+  height: 40px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.paginationBttns a {
+  padding: 10px;
+  margin: 8px;
+  border-radius: 5px;
+  border: 1px solid #2b2e2b;
+  color: #24bfa0;
+  cursor: pointer;
+}
+.paginationBttns a:hover {
+  background-color: #4d3;
+  color: #fff;
+}
+.paginationActive a {
+  color: #fff;
+  background-color: #4d3;
+}
+.text-upper {
+  text-transform: capitalize;
+}
