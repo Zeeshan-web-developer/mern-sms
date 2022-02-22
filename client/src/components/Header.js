@@ -1,10 +1,11 @@
-
-import React from "react";
-import "../app/App.css"
+import React from 'react';
+import Styles from './styles/Header.module.css';
 function Header() {
   return (
-    <div>
-      <h2 id="header__title">Student Management System</h2>
+    <div className="row">
+      <div className="col">
+        <h2 className={Styles.header__title}>Admin Portal</h2>
+      </div>
     </div>
   );
 }

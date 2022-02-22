@@ -1,14 +1,36 @@
-
-import React from "react";
-import { positions, Provider } from "react-alert";
-import AlertTemplate from "react-alert-template-basic";
-
-const options = {
-  timeout: 5000,
-  position: positions.MIDDLE,
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { userRoutes, authRoutes, coursesRoutes } from './constants';
+const Routes = () => {
+  return (
+    <Router>
+      <Switch>
+        {userRoutes.map((route, index) => (
+          <Route
+            key={index}
+            path={route.path}
+            exact={route.exact}
+            component={route.main}
+          />
+        ))}
+        {authRoutes.map((route, index) => (
+          <Route
+            key={index}
+            path={route.path}
+            exact={route.exact}
+            component={route.main}
+          />
+        ))}
+        {coursesRoutes.map((route, index) => (
+          <Route
+            key={index}
+            path={route.path}
+            exact={route.exact}
+            component={route.main}
+          />
+        ))}
+      </Switch>
+    </Router>
+  );
 };
-function Routes() {
-  return <Provider template={AlertTemplate} {...options}></Provider>;
-}
-
 export default Routes;

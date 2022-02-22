@@ -1,11 +1,10 @@
+import React, { useState, useEffect } from 'react';
+import { fetchData } from '../../utils/index';
+import { useSelector } from 'react-redux';
+import Pagination from '../../components/Pagination';
+import DisplayHeader from '../../components/DisplayHeader';
 
-import React, { useState, useEffect } from "react";
-import { fetchData } from "../../utils/index";
-import { useSelector } from "react-redux";
-import Pagination from "../../components/Pagination";
-import DisplayHeader from "../../components/DisplayHeader";
-
-import Students from "../../components/Students";
+import Students from '../../components/Student';
 function Display() {
   const users = useSelector((state) => state.students);
   const [pageNumber, setPageNumber] = useState(0);

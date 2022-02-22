@@ -1,11 +1,11 @@
-
-import axios from "../api/index";
-import store from "../redux/store";
-import { positions } from "react-alert";
-import { setStudents } from "../redux/actions";
+import axios from '../api/axios';
+import store from '../redux/store';
+import { positions } from 'react-alert';
+import { setStudents } from '../redux/actions';
 export const fetchData = async () => {
   try {
-    const reponse = await axios.get("/students");
+    console.log('fetching data');
+    const reponse = await axios.get('/users');
     store.dispatch(setStudents(reponse.data));
   } catch (err) {
     console.log(err);
@@ -14,11 +14,13 @@ export const fetchData = async () => {
 
 export const deleteStudent = async (id) => {
   try {
-    console.log("id", id);
-    await axios.delete(`/students/${id}`);
+    const response = await axios.delete(`/students/${id}`);
+    console.log(response);
     fetchData();
+    return response;
   } catch (err) {
-    console.log("cannot delete", err);
+    console.log('cannot delete', err);
+    return err;
   }
 };
 
@@ -26,10 +28,10 @@ export const onSubmit = async (data) => {
   const selected = new Date(data.dob).getFullYear();
   const now = new Date().getFullYear();
   let age = now - selected;
-  data["age"] = age;
-  data["id"] = Math.round(Math.random() * 100);
+  data['age'] = age;
+  data['id'] = Math.round(Math.random() * 100);
   try {
-    await axios.post("students", data);
+    await axios.post('students', data);
     fetchData();
   } catch (err) {
     console.log(err);
