@@ -1,14 +1,17 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import { Card, CardBody, Container, Col, Row, Button } from 'reactstrap';
 import { AvForm, AvField } from 'availity-reactstrap-validation';
 import { useHistory } from 'react-router-dom';
+import { loginUser } from '../../../redux/actions';
 import logo from '../../../assets/images/login.png';
 import Styles from './login.module.css';
 function Login() {
   const history = useHistory();
-  const handleValidSubmit = (event, errors, values) => {
-    console.log(values);
-    history.push('/home');
+  const dispatch = useDispatch();
+  const handleValidSubmit = (event, values, errors) => {
+    dispatch(loginUser(values, history));
+    console.log(event, values, errors);
   };
   return (
     <Container className={Styles.container}>
@@ -21,7 +24,7 @@ function Login() {
                 <span className={Styles.create__account}>Create Account</span>
               </div>
             </Col>
-            <Col md="6" className={Styles.login__form}>
+            <Col md="4" className={Styles.login__form}>
               <h4 className={`${Styles.login__header} mt-5 text-center`}>
                 Log In
               </h4>
@@ -52,8 +55,12 @@ function Login() {
                     required
                   />
                 </Row>
-                <div className="mt-5">
-                  <Button color="warning" type="submit">
+                <div className={`mt-5 ${Styles.btn}`}>
+                  <Button
+                    color="warning"
+                    type="submit"
+                    style={{ width: '100%' }}
+                  >
                     Login
                   </Button>
                 </div>
