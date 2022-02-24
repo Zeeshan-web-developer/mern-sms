@@ -1,7 +1,3 @@
-#add__student {
-  margin-right: 5%;
-  float: right;
-}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -87,6 +83,17 @@ th {
   text-align: left;
   padding: 8px;
 }
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
 .paginationBttns {
   width: 80%;
   height: 40px;

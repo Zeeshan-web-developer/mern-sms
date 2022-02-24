@@ -7,9 +7,9 @@ import { Container } from 'reactstrap';
 function App() {
   return (
     <AlertProvider template={AlertTemplate} {...options}>
-      <Container>
+      <>
         <Routes />
-      </Container>
+      </>
     </AlertProvider>
   );
 }

@@ -1,24 +1,13 @@
-
 .btn {
-  display: block;
-  appearance: none;
   background: #333 !important;
   color: white;
   border: none;
+  width: 100%;
   text-transform: uppercase;
-  padding: 10px 20px;
-  border-radius: 4px;
-  display: block;
+  border-radius: 2px;
   appearance: none;
-  margin-top: 40px;
-  border: 1px solid #333 !important;
-  margin-bottom: 20px;
   text-transform: uppercase;
-  padding: 10px 20px;
-  border-radius: 4px;
 }
-
-
 
 button {
   display: block;

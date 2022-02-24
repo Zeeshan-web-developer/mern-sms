@@ -1,10 +1,11 @@
 .header__title {
-  background-color: #76b5c5;
+  background-color: #e3fc04b2;
   padding: 0.8rem;
+
   font-family: monospace;
   font-size: 1.5rem;
   font-weight: bold;
-  color: #fff;
+  color: #000;
   text-align: center;
   text-transform: uppercase;
 }

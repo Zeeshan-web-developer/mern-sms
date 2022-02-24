@@ -1,1 +1,2 @@
-export * from './authentication/actions';
+export * from './authentication/actions'; //login actions
+export * from './user/actions'; //user actions

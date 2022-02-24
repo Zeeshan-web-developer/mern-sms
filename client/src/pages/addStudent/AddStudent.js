@@ -1,11 +1,10 @@
-
-import React, { useState } from "react";
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
-import { useForm } from "react-hook-form";
-import { onSubmit, validateDate } from "../../utils/index";
-import { useAlert } from "react-alert";
-import Styles from "./addstudent.module.css";
-import set from "../../utils/date"
+import React, { useState } from 'react';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { useForm } from 'react-hook-form';
+import { onSubmit, validateDate } from '../../utils/index';
+import { useAlert } from 'react-alert';
+import Styles from './addstudent.module.css';
+import set from '../../utils/date';
 const ModalExample = (props) => {
   const alert = useAlert();
   const { className } = props;
@@ -15,20 +14,20 @@ const ModalExample = (props) => {
     register,
     handleSubmit,
     formState: { errors, isDirty, isValid },
-  } = useForm({ mode: "onChange" });
+  } = useForm({ mode: 'onChange' });
 
   return (
-    <div>
-      <Button color="danger" onClick={toggle} id="add__student" className={Styles.btn}>
+    <>
+      <button color="danger" onClick={toggle} className={Styles.btn}>
         ADD
-      </Button>
+      </button>
       <Modal isOpen={modal} toggle={toggle} className={className}>
         <ModalHeader toggle={toggle}>Add New Student</ModalHeader>
         <ModalBody>
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="input-group mb-3">
               <input
-                {...register("name", {
+                {...register('name', {
                   required: true,
                   maxLength: 20,
                   minLength: 5,
@@ -42,16 +41,16 @@ const ModalExample = (props) => {
               />
             </div>
             <div>
-              {errors?.name?.type === "required" && (
+              {errors?.name?.type === 'required' && (
                 <p>This field is required</p>
               )}
-              {errors?.name?.type === "maxLength" && (
+              {errors?.name?.type === 'maxLength' && (
                 <p>Name cannot exceed 20 characters</p>
               )}
-              {errors?.name?.type === "minLength" && (
+              {errors?.name?.type === 'minLength' && (
                 <p>Name cannot be 5 less than characters</p>
               )}
-              {errors?.name?.type === "pattern" && (
+              {errors?.name?.type === 'pattern' && (
                 <p>Alphabetical characters only</p>
               )}
             </div>
@@ -59,7 +58,7 @@ const ModalExample = (props) => {
               <select
                 className="form-select"
                 id="inputGroupSelect01"
-                {...register("gender", {
+                {...register('gender', {
                   required: true,
                 })}
                 placeholder="gender"
@@ -69,12 +68,12 @@ const ModalExample = (props) => {
                 <option value="male">Male</option>
               </select>
             </div>
-            {errors?.gender?.type === "required" && (
+            {errors?.gender?.type === 'required' && (
               <p>This field is required</p>
             )}
             <div className="input-group date" data-provide="datepicker">
               <input
-                {...register("dob", {
+                {...register('dob', {
                   required: true,
                   validate: validateDate,
                 })}
@@ -91,11 +90,11 @@ const ModalExample = (props) => {
               </div>
             </div>
             <div>
-              {errors?.dob?.type === "required" && (
+              {errors?.dob?.type === 'required' && (
                 <p>This field is required</p>
               )}
 
-              {errors?.dob?.type === "validate" && <p>Invalid dob</p>}
+              {errors?.dob?.type === 'validate' && <p>Invalid dob</p>}
             </div>
             <ModalFooter>
               <Button
@@ -103,7 +102,7 @@ const ModalExample = (props) => {
                 type="submit"
                 onClick={(e) => {
                   toggle();
-                  alert.success("Saved Sucessfully!");
+                  alert.success('Saved Sucessfully!');
                 }}
                 disabled={!isDirty || !isValid}
               >
@@ -116,7 +115,7 @@ const ModalExample = (props) => {
           </form>
         </ModalBody>
       </Modal>
-    </div>
+    </>
   );
 };
 
