@@ -22,8 +22,7 @@ npm dev
 1. create Account and enjoy
 
 ### ScreenShorts
-![][image_ref_e9y9rk90]
-
+![](https://prnt.sc/b_XKflaCQnxY)
 
 
 #### Features
