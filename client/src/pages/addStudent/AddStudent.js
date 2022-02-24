@@ -19,7 +19,7 @@ const ModalExample = (props) => {
   return (
     <>
       <button color="danger" onClick={toggle} className={Styles.btn}>
-        ADD
+        ADD STUDENT
       </button>
       <Modal isOpen={modal} toggle={toggle} className={className}>
         <ModalHeader toggle={toggle}>Add New Student</ModalHeader>

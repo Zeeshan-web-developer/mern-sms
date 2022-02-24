@@ -1,28 +1,52 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  Nav,
+  NavItem,
+  NavLink,
+} from 'reactstrap';
 import Styles from './styles/Sidebar.module.css';
-function Sidebar() {
-  return (
-    <div className={Styles.sidebar}>
-      <nav className={Styles.navigation__bar}>
-        <li className={Styles.li}>
-          <Link to="/" className={Styles.link}>
-            Home
-          </Link>
-        </li>
-        <li className={Styles.li}>
-          <Link to="/addStudent" className={Styles.link}>
-            Add Student
-          </Link>
-        </li>
-        <li className={Styles.li}>
-          <Link to="/displayStudent" className={Styles.link}>
-            Display Student
-          </Link>
-        </li>
-      </nav>
-    </div>
-  );
-}
+export default class Example extends React.Component {
+  constructor(props) {
+    super(props);
 
-export default Sidebar;
+    this.toggle = this.toggle.bind(this);
+    this.state = {
+      isOpen: false,
+    };
+  }
+  toggle() {
+    this.setState({
+      isOpen: !this.state.isOpen,
+    });
+  }
+  render() {
+    return (
+      <div>
+        <Navbar color="light" light expand="md">
+          <NavbarToggler onClick={this.toggle} />
+          <Collapse isOpen={this.state.isOpen} navbar>
+            <Nav
+              className={`ml-auto ${Styles.navigation__bar} ${Styles.navbar}`}
+              navbar
+              style={{ flexDirection: 'column' }}
+            >
+              <NavItem className={Styles.link}>
+                <NavLink href="/components/" className={Styles.link}>
+                  Components
+                </NavLink>
+              </NavItem>
+              <NavItem className={Styles.link}>
+                <NavLink href="/components/" className={Styles.link}>
+                  Components
+                </NavLink>
+              </NavItem>
+            </Nav>
+          </Collapse>
+        </Navbar>
+      </div>
+    );
+  }
+}

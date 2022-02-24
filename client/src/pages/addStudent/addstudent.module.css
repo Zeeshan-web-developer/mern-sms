@@ -1,10 +1,13 @@
 .btn {
-  background: #333 !important;
+  background: #094853 !important;
   color: white;
   border: none;
-  width: 100%;
+  width: 80%;
+  margin-left: 5%;
+  margin-right: 5%;
   text-transform: uppercase;
   border-radius: 2px;
+  margin-top: 10%;
   appearance: none;
   text-transform: uppercase;
 }

@@ -1,24 +1,32 @@
 .sidebar {
   width: 100%;
-  height: 100vh;
-  background-color: #e3fc04b2;
+  height: 100%;
+  background-color: #094853;
 }
 .navigation__bar {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #094853;
+  width: 100%;
+  text-align: center;
+}
+.navbar {
+  padding-top: 0 !important;
 }
 
-.li {
-  text-align: center;
-  width: 100%;
-  padding: 0.5rem;
-  list-style: none;
-  margin-bottom: 1rem;
-}
 .link {
   text-decoration: none;
-  color: rgb(31, 28, 28);
+  color: white;
   font-size: 0.8rem;
   font-weight: bold;
   text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+  line-height: 1.5;
+  padding: 0.5rem;
+  list-style: none;
+  margin-bottom: 1rem;
 }
 .link:hover {
   color: rgb(53, 52, 52);
@@ -26,4 +34,11 @@
   text-decoration-color: white;
   text-decoration-style: solid;
   transition: all 0.5s ease-in-out;
+}
+
+/* when the user is on mobile screen  decase sidebar height */
+@media screen and (max-width: 768px) {
+  .navigation__bar {
+    height: fit-content;
+  }
 }

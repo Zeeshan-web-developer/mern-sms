@@ -1,3 +1,22 @@
+:root {
+  --primary-color: #15a1ba;
+  --primary-color-dark: #021215;
+  --primary-color-light: #128fa6;
+  --secondary-color-light: #107d91;
+  --tertiary-color: #0e6b7c;
+  --tertiary-color-dark: #0c5a68;
+  --tertiary-color-light: #094853;
+  --quaternary-color: #07363e;
+  --quaternary-color-dark: #052429;
+  --quaternary-color-light: #094853;
+  --quinary-color: #ffffff;
+  --senary-color: #8bd9e7;
+  --senary-color-dark: #a2e1ec;
+  --senary-color-light: #74d1e2;
+  --septenary-color: #5dcadd;
+  --septenary-color-dark: #45c2d9;
+  --septenary-color-light: #2ebbd4;
+}
 form {
   max-width: 500px;
   margin: 0 auto;
@@ -95,3 +114,6 @@ button {
   padding: 10px 20px;
   border-radius: 4px;
 } */
+.navbar {
+  padding-top: 0 !important;
+}

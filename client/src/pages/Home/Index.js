@@ -15,17 +15,17 @@ function Index() {
       </Row>
       <div className="row">
         <Row className="g-0">
-          <div className="col-2">
+          <div className="col-sm-2">
             <Sidebar />
           </div>
-          <div className="col-8" style={{ backgroundColor: '#F0EDE8' }}>
+          <div className="col-sm-8" style={{ backgroundColor: '#F0EDE8' }}>
             <Card className="shadow border-0  text-white text-center p-0  bg-transparent">
               <CardBody>
                 <Display />
               </CardBody>
             </Card>
           </div>
-          <div className="col-2 " style={{ backgroundColor: '#F0EDE8' }}>
+          <div className="col-sm-2 " style={{ backgroundColor: '#F0EDE8' }}>
             <AddStudent />
           </div>
         </Row>

@@ -121,3 +121,6 @@ th {
 .text-upper {
   text-transform: capitalize;
 }
+.navbar {
+  padding-top: 0 !important;
+}
